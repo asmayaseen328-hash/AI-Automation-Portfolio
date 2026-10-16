@@ -1337,3 +1337,110 @@ a {
     font-size: 0.85rem;
     opacity: 0.75;
 }
+/* Contact links */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 440px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(196, 181, 253, 0.28);
+    background: rgba(124, 58, 237, 0.12);
+    border-radius: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease,
+                box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(196, 181, 253, 0.75);
+    background: rgba(124, 58, 237, 0.2);
+    box-shadow: 0 0 24px rgba(167, 139, 250, 0.35);
+    outline: none;
+}
+
+.contact-icon {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    color: #c4b5fd;
+    background: rgba(196, 181, 253, 0.12);
+    border: 1px solid rgba(196, 181, 253, 0.25);
+}
+
+.contact-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.contact-text small {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #c4b5fd;
+}
+
+.contact-text strong {
+    font-size: 1rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Email + LinkedIn: prominent */
+.contact-link-primary {
+    padding: 16px 18px;
+}
+
+/* Facebook: secondary */
+.contact-link-secondary {
+    padding: 10px 14px;
+    align-self: flex-start;
+    background: transparent;
+    border-color: rgba(196, 181, 253, 0.2);
+}
+
+.contact-link-secondary .contact-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+}
+
+.contact-link-secondary .contact-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.contact-link-secondary .contact-text strong {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .contact-links {
+        max-width: 100%;
+    }
+
+    .contact-link-secondary {
+        align-self: stretch;
+    }
+}
